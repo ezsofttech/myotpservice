@@ -324,9 +324,9 @@ export default function ServicesPage() {
                     <span className="text-primary mr-2">✓</span> Custom integration
                   </li>
                 </ul>
-                <Button variant="outline" className="w-full bg-transparent">
+                <a href='/contact' className="w-full bg-transparent">
                   Contact Sales
-                </Button>
+                </a>
               </CardContent>
             </Card>
           </div>
