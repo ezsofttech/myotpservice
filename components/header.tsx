@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { MessageSquare, ArrowRight, Menu, X } from "lucide-react"
+import { MessageSquare, ArrowRight, Menu, X, Phone } from "lucide-react"
 import Link from "next/link"
 import { EnquiryPopup, DemoRequestButton } from "@/components/enquiry-popup"
 import { motion, AnimatePresence } from "framer-motion"
@@ -68,15 +68,15 @@ export default function Header() {
               transition={{ delay: 0.8 }}
               className="hidden md:flex items-center space-x-4"
             >
-              <DemoRequestButton className="bg-transparent" />
-              <EnquiryPopup
-                trigger={
-                  <Button size="sm" className="bg-primary hover:bg-primary/90 text-white">
-                    Get Started
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                }
-              />
+              <Button 
+                size="sm" 
+                variant="outline"
+                className="bg-transparent hover:bg-primary/10"
+                onClick={() => window.open('tel:+231887879877', '_self')}
+              >
+                <Phone className="mr-2 h-4 w-4" />
+                Call Now
+              </Button>
             </motion.div>
 
             <motion.button
@@ -120,15 +120,14 @@ export default function Header() {
                   </motion.div>
                 ))}
                 <div className="flex flex-col space-y-3 pt-4 border-t border-border">
-                  <DemoRequestButton className="bg-transparent justify-start" />
-                  <EnquiryPopup
-                    trigger={
-                      <Button className="bg-primary hover:bg-primary/90 text-white w-full">
-                        Get Started
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    }
-                  />
+                  <Button 
+                    variant="outline" 
+                    className="bg-transparent justify-start w-full"
+                    onClick={() => window.open('tel:+231887879877', '_self')}
+                  >
+                    <Phone className="mr-2 h-4 w-4" />
+                    Call +231887879877
+                  </Button>
                 </div>
               </div>
             </div>

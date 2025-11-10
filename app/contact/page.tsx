@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -46,75 +48,49 @@ export default function ContactPage() {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+            {/* Call to Action */}
             <div>
-              <Card>
+              <Card className="bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
                 <CardHeader>
-                  <CardTitle>Send us a Message</CardTitle>
-                  <CardDescription>We'll get back to you within 24 hours</CardDescription>
+                  <CardTitle className="text-2xl">Ready to Get Started?</CardTitle>
+                  <CardDescription>Call us directly for immediate assistance and consultation</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium">First Name</label>
-                      <Input placeholder="John" />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium">Last Name</label>
-                      <Input placeholder="Doe" />
-                    </div>
+                  <div className="text-center py-8">
+                    <Phone className="h-16 w-16 text-primary mx-auto mb-4" />
+                    <h3 className="text-3xl font-bold text-primary mb-2">+231887879877</h3>
+                    <p className="text-muted-foreground mb-6">Available 24/7 for support and consultation</p>
+                    <Button 
+                      size="lg" 
+                      className="w-full text-lg py-6"
+                      onClick={() => window.open('tel:+231887879877', '_self')}
+                    >
+                      <Phone className="mr-2 h-5 w-5" />
+                      Call Now
+                    </Button>
                   </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Email</label>
-                    <Input placeholder="john@company.com" type="email" />
+                  
+                  <div className="border-t pt-6">
+                    <h4 className="font-semibold mb-3">What to expect when you call:</h4>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
+                        Immediate technical consultation
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
+                        Custom solution recommendations
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
+                        Pricing based on your requirements
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
+                        Setup and integration guidance
+                      </li>
+                    </ul>
                   </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Company</label>
-                    <Input placeholder="Your Company Name" />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Phone Number</label>
-                    <Input placeholder="+1 (555) 123-4567" type="tel" />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Industry</label>
-                    <Select>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select your industry" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="fintech">Fintech & Banking</SelectItem>
-                        <SelectItem value="ecommerce">E-commerce & Retail</SelectItem>
-                        <SelectItem value="healthcare">Healthcare</SelectItem>
-                        <SelectItem value="education">Education</SelectItem>
-                        <SelectItem value="enterprise">Enterprise & SaaS</SelectItem>
-                        <SelectItem value="transportation">Transportation & Logistics</SelectItem>
-                        <SelectItem value="other">Other</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Expected Monthly Volume</label>
-                    <Select>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select expected volume" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="small">Less than 10K OTPs/month</SelectItem>
-                        <SelectItem value="medium">10K - 100K OTPs/month</SelectItem>
-                        <SelectItem value="large">100K - 1M OTPs/month</SelectItem>
-                        <SelectItem value="enterprise">1M+ OTPs/month</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Message</label>
-                    <Textarea placeholder="Tell us about your project and requirements..." rows={4} />
-                  </div>
-                  <Button className="w-full" size="lg">
-                    Send Message
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
                 </CardContent>
               </Card>
             </div>
@@ -128,7 +104,7 @@ export default function ContactPage() {
                     <Mail className="h-6 w-6 text-primary mt-1" />
                     <div>
                       <h4 className="font-semibold mb-1">Email</h4>
-                      <p className="text-muted-foreground">contact@MyOtpService.com</p>
+                      <p className="text-muted-foreground">info@myotpservices.com</p>
                       <p className="text-sm text-muted-foreground">For general inquiries</p>
                     </div>
                   </div>
@@ -136,7 +112,7 @@ export default function ContactPage() {
                     <Phone className="h-6 w-6 text-primary mt-1" />
                     <div>
                       <h4 className="font-semibold mb-1">Phone</h4>
-                      <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                      <p className="text-muted-foreground">+231887879877</p>
                       <p className="text-sm text-muted-foreground">Mon-Fri, 9AM-6PM EST</p>
                     </div>
                   </div>
@@ -144,7 +120,7 @@ export default function ContactPage() {
                     <MessageSquare className="h-6 w-6 text-primary mt-1" />
                     <div>
                       <h4 className="font-semibold mb-1">WhatsApp</h4>
-                      <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                      <p className="text-muted-foreground">+231887879877</p>
                       <p className="text-sm text-muted-foreground">24/7 support available</p>
                     </div>
                   </div>
@@ -152,13 +128,13 @@ export default function ContactPage() {
                     <MapPin className="h-6 w-6 text-primary mt-1" />
                     <div>
                       <h4 className="font-semibold mb-1">Address</h4>
-                      <p className="text-muted-foreground">
+                      {/* <p className="text-muted-foreground">
                         123 Tech Street
                         <br />
-                        San Francisco, CA 94105
+                        - 94105
                         <br />
                         United States
-                      </p>
+                      </p> */}
                     </div>
                   </div>
                 </div>
@@ -173,7 +149,7 @@ export default function ContactPage() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <Button className="w-full justify-start bg-transparent" variant="outline">
+                  {/* <Button className="w-full justify-start bg-transparent" variant="outline">
                     <MessageSquare className="mr-2 h-4 w-4" />
                     Start WhatsApp Demo
                   </Button>
@@ -184,7 +160,7 @@ export default function ContactPage() {
                   <Button className="w-full justify-start bg-transparent" variant="outline">
                     <Phone className="mr-2 h-4 w-4" />
                     Request Callback
-                  </Button>
+                  </Button> */}
                 </CardContent>
               </Card>
 
@@ -348,12 +324,13 @@ export default function ContactPage() {
               Join hundreds of businesses already using our WhatsApp API for secure, reliable OTP delivery
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8">
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
-                Schedule Demo
+              <Button 
+                size="lg" 
+                className="text-lg px-8"
+                onClick={() => window.open('tel:+231887879877', '_self')}
+              >
+                <Phone className="mr-2 h-5 w-5" />
+                Call +231887879877
               </Button>
             </div>
           </div>

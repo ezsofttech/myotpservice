@@ -98,18 +98,33 @@ export function Footer() {
                   <Mail className="h-4 w-4 text-primary" />
                   <span>contact@whatsappotp.com</span>
                 </div>
-                <div className="flex items-center space-x-2 text-sm text-slate-300">
+                <div 
+                  className="flex items-center space-x-2 text-sm text-slate-300 cursor-pointer hover:text-primary transition-colors"
+                  onClick={() => window.open('tel:+231887879877', '_self')}
+                >
                   <Phone className="h-4 w-4 text-primary" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+231887879877</span>
                 </div>
                 <div className="flex items-center space-x-2 text-sm text-slate-300">
                   <MapPin className="h-4 w-4 text-primary" />
-                  <span>San Francisco, CA</span>
+                  <span>-</span>
                 </div>
               </div>
 
+              {/* Call to Action Button */}
+              <div className="pt-4">
+                <Button 
+                  size="sm" 
+                  className="bg-primary hover:bg-primary/90 w-full"
+                  onClick={() => window.open('tel:+231887879877', '_self')}
+                >
+                  <Phone className="mr-2 h-4 w-4" />
+                  Call Now
+                </Button>
+              </div>
+
               {/* Newsletter */}
-              <div className="space-y-2 pt-4">
+              {/* <div className="space-y-2 pt-4">
                 <h4 className="font-medium text-primary">Stay Updated</h4>
                 <div className="flex space-x-2">
                   <Input
@@ -120,7 +135,7 @@ export function Footer() {
                     Subscribe
                   </Button>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -134,7 +149,7 @@ export function Footer() {
                 Join thousands of businesses using our WhatsApp API for secure OTP delivery
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-                <EnquiryPopup
+                {/* <EnquiryPopup
                   trigger={
                     <Button size="lg" className="bg-primary hover:bg-primary/90">
                       Start Free Trial
@@ -147,7 +162,7 @@ export function Footer() {
                   className="bg-transparent border-slate-600 text-slate-300 hover:bg-slate-700"
                 >
                   View Documentation
-                </Button>
+                </Button> */}
               </div>
             </div>
           </div>

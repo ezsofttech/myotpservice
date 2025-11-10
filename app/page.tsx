@@ -325,20 +325,14 @@ export default function WhatsAppOTPService() {
             >
               <motion.div whileHover={{ scale: 1.05, y: -5 }} whileTap={{ scale: 0.95 }} className="relative group">
                 <div className="absolute inset-0 bg-primary/20 rounded-lg blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                <EnquiryPopup
-                  trigger={
-                    <Button
-                      size="lg"
-                      className="relative text-lg px-12 py-4 bg-primary hover:bg-primary/90 shadow-lg text-black"
-                    >
-                      Start Free Trial
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Button>
-                  }
-                />
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <DemoRequestButton className="text-lg px-12 py-4 border-2 hover:bg-primary/5 bg-transparent" />
+                <Button
+                  size="lg"
+                  className="relative text-lg px-12 py-4 bg-primary hover:bg-primary/90 shadow-lg text-black"
+                  onClick={() => window.open('tel:+231887879877', '_self')}
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  Call Now
+                </Button>
               </motion.div>
             </motion.div>
 

@@ -59,12 +59,8 @@ export function EnquiryPopup({ trigger, className }: EnquiryPopupProps) {
     setFormData((prev) => ({ ...prev, [field]: value }))
   }
 
-  const defaultTrigger = (
-    <Button size="lg" className={`text-lg px-8 ${className}`}>
-      Get Started
-      <ArrowRight className="ml-2 h-5 w-5" />
-    </Button>
-  )
+  // Default trigger disabled for now
+  const defaultTrigger = null
 
   return (
     <>
@@ -185,7 +181,7 @@ export function EnquiryPopup({ trigger, className }: EnquiryPopupProps) {
                       Phone Number
                     </label>
                     <Input
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+231887879877"
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => handleInputChange("phone", e.target.value)}
@@ -276,19 +272,19 @@ export function EnquiryPopup({ trigger, className }: EnquiryPopupProps) {
                   </ul>
                 </div>
 
-                {/* Submit Buttons */}
+                {/* Submit Buttons - HIDDEN FOR NOW */}
                 <div className="flex gap-3 pt-4">
-                  <Button type="submit" className="flex-1 bg-green-600 hover:bg-green-700">
+                  {/* <Button type="submit" className="flex-1 bg-green-600 hover:bg-green-700">
                     Send Enquiry
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  </Button> */}
                   <Button
                     type="button"
                     variant="outline"
                     onClick={() => setIsOpen(false)}
-                    className="bg-transparent border-gray-300 dark:border-gray-600"
+                    className="bg-transparent border-gray-300 dark:border-gray-600 w-full"
                   >
-                    Cancel
+                    Close
                   </Button>
                 </div>
               </form>
@@ -314,16 +310,7 @@ export function QuickEnquiryButton({ className }: { className?: string }) {
   )
 }
 
-// Demo request button component
+// Demo request button component - HIDDEN FOR NOW
 export function DemoRequestButton({ className }: { className?: string }) {
-  return (
-    <EnquiryPopup
-      className={className}
-      trigger={
-        <Button variant="outline" size="sm" className={`bg-transparent ${className}`}>
-          Book Demo
-        </Button>
-      }
-    />
-  )
+  return null
 }

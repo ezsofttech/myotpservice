@@ -1,7 +1,9 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { MessageSquare, Zap, Users, Shield, Code, Globe, Clock, BarChart3, ArrowRight } from "lucide-react"
+import { MessageSquare, Zap, Users, Shield, Code, Globe, Clock, BarChart3, ArrowRight, Phone } from "lucide-react"
 import Link from "next/link"
 
 export default function ServicesPage() {
@@ -265,7 +267,7 @@ export default function ServicesPage() {
                     <span className="text-primary mr-2">✓</span> API documentation
                   </li>
                 </ul>
-                <Button className="w-full">Get Started</Button>
+                {/* <Button className="w-full">Get Started</Button> */}
               </CardContent>
             </Card>
             <Card className="hover:shadow-lg transition-shadow border-primary">
@@ -295,7 +297,7 @@ export default function ServicesPage() {
                     <span className="text-primary mr-2">✓</span> Webhooks
                   </li>
                 </ul>
-                <Button className="w-full">Get Started</Button>
+                {/* <Button className="w-full">Get Started</Button> */}
               </CardContent>
             </Card>
             <Card className="hover:shadow-lg transition-shadow">
@@ -340,12 +342,13 @@ export default function ServicesPage() {
               Join hundreds of businesses already using our WhatsApp API for secure authentication
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8">
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
-                Schedule Demo
+              <Button 
+                size="lg" 
+                className="text-lg px-8"
+                onClick={() => window.open('tel:+231887879877', '_self')}
+              >
+                <Phone className="mr-2 h-5 w-5" />
+                Call +231887879877
               </Button>
             </div>
           </div>
